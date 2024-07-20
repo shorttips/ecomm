@@ -8,7 +8,7 @@ pipeline {
 
     stages {
         stage('Pull code') {
-            agent any
+            agent {label 'agent-a'}
             steps {
                 git branch: 'main', url: 'https://github.com/your-repo/your-project.git'
                 sh 'echo "check"'
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Slack Notification') {
             steps {
-                agent any
+                agent {label 'agent-b'}
                 sh 'echo "slack notification"'
                 slackSend channel: "${SLACK_CHANNEL}", color: 'good', message: "Code pushed to Github"
             }
