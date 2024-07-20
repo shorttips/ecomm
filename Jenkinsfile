@@ -11,6 +11,7 @@ pipeline {
             agent any
             steps {
                 git branch: 'main', url: 'https://github.com/your-repo/your-project.git'
+                sh 'echo "check"'
             }
         }
         stage('Slack Notification') {
