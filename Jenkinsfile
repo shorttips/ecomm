@@ -10,7 +10,7 @@ pipeline {
         stage('Pull code') {
             steps {
                 /*git branch: 'main', url: 'https://github.com/your-repo/your-project.git'*/
-                sh 'echo "check github webhook"'
+                sh 'echo "check github wbhook"'
             }
         }
         stage('Slack Notification') {
