@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Pull code') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-repo/your-project.git'
+                /*git branch: 'main', url: 'https://github.com/your-repo/your-project.git'*/
                 sh 'echo "check"'
             }
         }
