@@ -15,7 +15,7 @@ pipeline {
         //Pulls data from remote VCM and triggers the pipeline
         stage('Checkout') {
             steps {
-                sh 'echo "Pulling Code from Github"'
+                sh 'echo "Pulling Code from Github VCM"'
                 git branch: 'main', url: 'https://github.com/shorttips/ecomm.git'
             }
         }
