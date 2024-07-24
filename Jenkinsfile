@@ -62,7 +62,7 @@ pipeline {
 }
 
 
-pipeline {
+/*pipeline {
     agent any //declares the app or tool used by jenkins to execute the commands
 
     stages {
@@ -84,4 +84,4 @@ pipeline {
             }
     }
 }
-
+*/
