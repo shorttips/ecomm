@@ -19,6 +19,8 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/shorttips/ecomm.git'
             }
         }
+
+
         stage('Slack Notification') {
             steps {
                 sh 'echo "slack notification"'
@@ -26,16 +28,17 @@ pipeline {
             }
         }
 
-        /*stage('SonarQube Analysis') {
+        /*
+        stage('SonarQube Analysis') {
             steps {
                 sh 'echo "Sonarqube Analysis"'
             }
-        }*/
+        }
+        */
 
         stage('Build') {
             steps {
                 sh 'echo "Build Stage...."'
-                nodejs()
                 nodejs(nodeJSInstallationName: 'node 22.5.1') {
                     sh 'npm -v'
                     sh 'npm install'
@@ -60,9 +63,13 @@ pipeline {
         }
      }
 }
+}
 
 
-/*pipeline {
+
+
+/*
+pipeline {
     agent any //declares the app or tool used by jenkins to execute the commands
 
     stages {
