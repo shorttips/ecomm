@@ -46,8 +46,9 @@ pipeline {
                 }
             }
     }
+    }
 
-     post 
+post 
      {
         success {
             slackSend channel: "${SLACK_CHANNEL}", color: 'good', message: "Build ${env.JOB_NAME} #${env.BUILD_NUMBER} succeeded"
@@ -63,7 +64,7 @@ pipeline {
         }
      }
 }
-}
+
 
 
 
